@@ -1,7 +1,10 @@
 <%= form_for(@activity) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :comments, placeholder: "New activity" %>
+    <%= f.text_area :date, placeholder: "Add date" %>
+    <%= f.text_area :activity, placeholder: "Activity" %>
+    <%= f.text_area :comments, placeholder: "Add comment" %>
+    <%= f.text_area :minutes, placeholder: "Minutes" %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

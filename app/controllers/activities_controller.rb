@@ -18,6 +18,6 @@ class ActivitiesController < ApplicationController
   private
 
     def activity_params
-      params.require(:activity).permit(:comments)
+      params.require(:activity).permit(:comments, :date, :activity, :minutes)
     end
 end
