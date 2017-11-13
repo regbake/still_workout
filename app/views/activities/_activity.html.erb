@@ -6,6 +6,9 @@
   <span class="minutes"><%= activity.minutes %></span>
   <span class="minutes"><%= activity.comments %></span>
   <span class="timestamp">
-    Worked out <%= time_ago_in_words(activity.date) %> ago.
+    Workout was <%= time_ago_in_words(activity.date) %> ago.
+      <%= link_to "delete", activity, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+      <%= link_to "edit", activity, method: :update %>
   </span>
 </li>
