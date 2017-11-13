@@ -1,0 +1,11 @@
+<%= will_paginate @activities %>
+
+<li id="activity-<%= activity.id %>">
+  <span class="user"><%= link_to activity.user.name, activity.user %></span>
+  <span class="activity"><%= activity.activity %></span>
+  <span class="minutes"><%= activity.minutes %></span>
+  <span class="minutes"><%= activity.comments %></span>
+  <span class="timestamp">
+    Worked out <%= time_ago_in_words(activity.date) %> ago.
+  </span>
+</li>
