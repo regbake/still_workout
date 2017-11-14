@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'statistics/index'
+
   get 'sessions/new'
 
   get 'users/new'

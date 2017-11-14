@@ -34,6 +34,8 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 gem 'will_paginate',           '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'chartkick'
+gem 'highcharts-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
