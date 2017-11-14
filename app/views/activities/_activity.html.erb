@@ -9,6 +9,6 @@
     Workout was <%= time_ago_in_words(activity.date) %> ago.
       <%= link_to "delete", activity, method: :delete,
                                        data: { confirm: "You sure?" } %>
-      <%= link_to "edit", activity, method: :update %>
+      <a href="/activities/<%=activity.id%>/edit">edit</a>
   </span>
 </li>
