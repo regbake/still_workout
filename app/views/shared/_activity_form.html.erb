@@ -6,6 +6,8 @@
     <%= f.text_area :comments, placeholder: "Add comment" %>
     <%= f.text_area :minutes, placeholder: "Minutes" %>
   </div>
-
+  <ul id="myList"></ul>
+<%= submit_tag "Add address", :type =>  "button", :id => "addAddress",
+                                      :onclick => "addAddressField()"%>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
