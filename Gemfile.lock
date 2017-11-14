@@ -79,6 +79,8 @@ GEM
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    groupdate (3.2.0)
+      activesupport (>= 3)
     highcharts-rails (6.0.2)
       railties (>= 3.1)
     i18n (0.9.1)
@@ -201,8 +203,9 @@ DEPENDENCIES
   bulma-rails (~> 0.0.4.1)
   byebug
   capybara (~> 2.13)
-  chartkick
+  chartkick (~> 2.2.0)
   coffee-rails (~> 4.2)
+  groupdate
   highcharts-rails
   jbuilder (~> 2.5)
   jquery-rails

@@ -5,3 +5,7 @@
   <%= a.activity %>
   <%= a.minutes %>
 <% end %>
+
+<%= line_chart @activity.group(:minutes).count %>
+
+<%= line_chart User.group_by_day(:created_at).count %>
