@@ -2,8 +2,9 @@
 <p>Find me in app/views/statistics/index.html.erb</p>
 
 <% act = [] %>
+<!-- this is only to get the different activities -->
 <% @get_activity.each do |a| %>
-
+  <!-- get all the activities and put into act array -->
   <% if act.empty? %>
     <%act.push(a.activity)%>
   <% elsif a.activity != act[-1] %>
@@ -14,9 +15,12 @@
 <% end %>
 
 <%= act %>
+<!-- //render a graph for each of the elements of the act arr -->
 
+<h1>Total minutes of activity by day</h1>
 <%= line_chart @activity.group(:date).sum(:minutes) %>
 
-<%= line_chart @activity.group(:date).sum(:minutes) %>
+<h1>Total minutes of run per day</h1>
+<%= line_chart @activity.where("activity = 'run'").group(:date).sum(:minutes) %>
 
 <!-- <%= line_chart User.group_by_day(:created_at).count %> -->
