@@ -7,21 +7,41 @@
   <!-- get all the activities and put into act array -->
   <% if act.empty? %>
     <%act.push(a.activity)%>
+    <input type="checkbox" name="graphs" value="<%=a.activity%>"><%=a.activity%>
   <% elsif a.activity != act[-1] %>
      <% act.push(a.activity) %>
+     <input type="checkbox" name="graphs" value="<%=a.activity%>"><%=a.activity%>
   <% end %>
-  <%= a.activity %>
+  <!-- <%= a.activity %> -->
   <!-- <%= a.minutes %> -->
 <% end %>
 
-<%= act %>
+<!-- <%= act %> -->
 <!-- //render a graph for each of the elements of the act arr -->
 
 <h1>Total minutes of activity by day</h1>
 <%= line_chart @activity.group(:date).sum(:minutes) %>
 
+<h2>Select individual activities to view</h2>
 <% act.each do |i| %>
-  <h1>Total minutes of <%= i %> per day</h1>
+  <h1 id="<%=i%>-title">Total minutes of <%= i %> per day</h1>
   <%= line_chart @activity.where("activity = '#{i}'").group(:date).sum(:minutes) %>
 <% end %>
 <!-- <%= line_chart User.group_by_day(:created_at).count %> -->
+
+<script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bottom -->
