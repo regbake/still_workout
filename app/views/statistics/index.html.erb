@@ -7,7 +7,7 @@
   <!-- get all the activities and put into act array -->
   <% if act.empty? %>
     <%act.push(a.activity)%>
-    <input type="checkbox" name="graphs" value="<%=a.activity%>"><%=a.activity%>
+    <input type="checkbox" name="graphs" value="<%=a.activity%>" onclick=toggle()><%=a.activity%>
   <% elsif a.activity != act[-1] %>
      <% act.push(a.activity) %>
      <input type="checkbox" name="graphs" value="<%=a.activity%>"><%=a.activity%>
@@ -23,14 +23,19 @@
 <%= line_chart @activity.group(:date).sum(:minutes) %>
 
 <h2>Select individual activities to view</h2>
+
 <% act.each do |i| %>
-  <h1 id="<%=i%>-title">Total minutes of <%= i %> per day</h1>
-  <%= line_chart @activity.where("activity = '#{i}'").group(:date).sum(:minutes) %>
+  <div id="<%=i%>-title" style="display: initial ">
+    <h1>Total minutes of <%= i %> per day</h1>
+    <%= line_chart @activity.where("activity = '#{i}'").group(:date).sum(:minutes) %>
+  </div>
 <% end %>
 <!-- <%= line_chart User.group_by_day(:created_at).count %> -->
 
 <script>
+function toggle() {
 
+}
 </script>
 
 
