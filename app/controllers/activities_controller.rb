@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    2.times {@activity = current_user.activities.build(activity_params)}
+    @activity = current_user.activities.build(activity_params)
 
     if @activity.save
       flash[:success] = "Activity created!"
