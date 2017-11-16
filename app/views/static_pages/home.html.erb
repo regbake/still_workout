@@ -9,6 +9,7 @@
       </section>
     </aside>
   </div>
+  <%= pie_chart @show.group(:activity).sum(:minutes) %>
 <% else %>
 
 <div class="center jumbotron">

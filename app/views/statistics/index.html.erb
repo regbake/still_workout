@@ -1,5 +1,5 @@
-<h1>Statistics#index</h1>
-<p>Find me in app/views/statistics/index.html.erb</p>
+<h1>Statistics</h1>
+<h2>Select individual activities to view</h2>
 
 <% act = [] %>
 <!-- this is only to get the different activities -->
@@ -22,8 +22,6 @@
 <h1>Total minutes of activity by day</h1>
 <%= line_chart @activity.group(:date).sum(:minutes) %>
 
-<h2>Select individual activities to view</h2>
-
 <% act.each do |i| %>
   <div id="<%=i%>-title" style="display: none ">
     <h1>Total minutes of <%= i %> per day</h1>
@@ -33,7 +31,6 @@
 <!-- <%= line_chart User.group_by_day(:created_at).count %> -->
 
 <script>
-
 function toggleGraph(val) {
   var isChecked = $("#" + val).is(":checked");
 
