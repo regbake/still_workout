@@ -7,10 +7,10 @@
   <!-- get all the activities and put into act array -->
   <% if act.empty? %>
     <%act.push(a.activity)%>
-    <input type="checkbox" name="graphs" value="<%=a.activity%>" onclick=toggle()><%=a.activity%>
+    <input id="<%=a.activity%>" type="checkbox" name="graphs" value="<%=a.activity%>" onclick=toggleGraph(this.value)><%=a.activity%>
   <% elsif a.activity != act[-1] %>
      <% act.push(a.activity) %>
-     <input type="checkbox" name="graphs" value="<%=a.activity%>"><%=a.activity%>
+     <input id="<%=a.activity%>" type="checkbox" name="graphs" value="<%=a.activity%>" onclick=toggleGraph(this.value)><%=a.activity%>
   <% end %>
   <!-- <%= a.activity %> -->
   <!-- <%= a.minutes %> -->
@@ -33,8 +33,14 @@
 <!-- <%= line_chart User.group_by_day(:created_at).count %> -->
 
 <script>
-function toggle() {
+function toggleGraph(val) {
+  var isChecked = $("#" + val).is(":checked");
 
+  if (isChecked) {
+    $("#" + val + "-title").show();
+  } else {
+    $("#" + val + "-title").hide();
+  }
 }
 </script>
 

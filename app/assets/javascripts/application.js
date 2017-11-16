@@ -15,4 +15,6 @@
 // require highcharts
 //= require Chart.bundle
 //= require chartkick
+//= require jquery3
+//= require jquery_ujs
 //= require_tree .
