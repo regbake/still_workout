@@ -1,8 +1,9 @@
 <%= @user.name %>, <%= @user.email %>
 
-<div class="col-md-8" id="activity-display">
+<div class="col-md-8 header-font" id="activity-display">
   <% if @user.activities.any? %>
     <h3>Activities (<%= @user.activities.count %>)</h3>
+    <a href="/statistics/index">view analytics</a>
     <ol class="activities">
       <%= render @activities %>
     </ol>

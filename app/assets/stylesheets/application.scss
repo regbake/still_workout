@@ -16,6 +16,33 @@
 
 @import 'bootstrap';
 
+#my-logo {
+  font-family: 'Oxygen', sans-serif;
+  color: white;
+}
+
+.jumbotron {
+  background-color: rrgba(182, 209, 255, .8);
+  border: solid white 5px;
+  background-image: url("http://rockandice.com/wp-content/uploads/2017/11/Jonathan-Siegrist-Spain-8c-2015-Bear-Cam-I9A7952-934x563.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#jumbo-content {
+  position: relative;
+  top: 40%;
+}
+
+.display-font {
+  font-size: 19px;
+}
+
+.header-font {
+  font-size: 24px;
+}
+
 .login-form {
   margin: 0 auto;
 }
@@ -24,13 +51,24 @@
   margin: 0 auto;
 }
 
+.nav-links {
+  display: inline;
+}
+
+.edit-activity {
+  margin: 0 auto;
+  margin-top: 15%;
+  height: 350px;
+}
+
 #activity-display {
-  margin-left: 35%;
+  margin-left: 15%;
   margin-top: 5%;
 }
 
 body {
   padding-top: 60px;
+  background-color: rgba(182, 209, 255, .8);
 }
 
 section {
@@ -60,6 +98,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+  height: 100px;
 }
 
 footer a {

@@ -1,10 +1,9 @@
-
-
-<li id="activity-<%= activity.id %>">
-  <span class="activity"><%= activity.activity %></span>
-  <span class="minutes"><%= activity.minutes %></span>
-  <span class="minutes"><%= activity.comments %></span>
-  <span class="timestamp">
+<br>
+<li class="display-font" id="activity-<%= activity.id %>">
+  <span class="activity display-font"><%= activity.activity %> ||</span>
+  <span class="minutes display-font"><%= activity.minutes %> minutes ||</span>
+  <span class="minutes display-font"><%= activity.comments %> ||</span>
+  <span class="timestamp display-font">
     Workout was <%= time_ago_in_words(activity.date) %> ago.
       <%= link_to "delete", activity, method: :delete,
                                        data: { confirm: "You sure?" } %>

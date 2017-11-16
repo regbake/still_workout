@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'Chart.bundle', 'chartkick', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
   </head>
 
   <body>
@@ -16,7 +17,7 @@
     <% end %>
     <!-- <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %> -->
     <%= yield %>
-    <%= render "layouts/footer" %>
   </div>
+  <%= render "layouts/footer" %>
   </body>
 </html>

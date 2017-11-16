@@ -10,12 +10,15 @@
       </section>
     </div>
   </div>
+  <br>
   <%= pie_chart @show.group(:activity).sum(:minutes) %>
 
 <% else %>
   <div class="center jumbotron">
-    <h1>Yes, I work out.</h1>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <div id="jumbo-content">
+      <h1>Yes, I work out.</h1>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary "%>
+    </div>
   </div>
 
 <% end %>

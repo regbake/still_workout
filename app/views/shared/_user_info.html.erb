@@ -1,3 +1,4 @@
 <h1><%= current_user.name %></h1>
-<span><%= link_to "view my profile", current_user %></span>
+<span><%= link_to "view workouts", current_user %></span>
+<span><a href="/statistics/index">view analytics</a></span>
 <span><%= pluralize(current_user.activities.count, "activity") %></span>
