@@ -25,7 +25,7 @@
 <h2>Select individual activities to view</h2>
 
 <% act.each do |i| %>
-  <div id="<%=i%>-title" style="display: initial ">
+  <div id="<%=i%>-title" style="display: none ">
     <h1>Total minutes of <%= i %> per day</h1>
     <%= line_chart @activity.where("activity = '#{i}'").group(:date).sum(:minutes) %>
   </div>
@@ -33,6 +33,7 @@
 <!-- <%= line_chart User.group_by_day(:created_at).count %> -->
 
 <script>
+
 function toggleGraph(val) {
   var isChecked = $("#" + val).is(":checked");
 
