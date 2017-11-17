@@ -11,6 +11,7 @@
     </div>
   </div>
   <br>
+  <h2 style="text-align: center">Activity breakdown</h2>
   <%= pie_chart @show.group(:activity).sum(:minutes) %>
 
 <% else %>
